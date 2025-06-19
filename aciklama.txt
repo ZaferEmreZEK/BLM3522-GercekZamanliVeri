@@ -1,0 +1,8 @@
+Bu proje, server.js dosyasında ws paketiyle 8080 portunda bir WebSocket sunucusu kurup
+gelen JSON biçimli GPS verilerini hem dotenv ile yönetilen Event Hub bağlantısıyla
+Azure Event Hubs’a gönderir hem de tüm bağlı istemcilere yayınlar.
+client_test.js, Türkiye sınırları içinde rastgele lat/lng ve zaman bilgisi üreten bir
+test istemcisi olarak her 30 saniyede sunucuya veri yollar. index.html ve ona bağlı
+frontend.js ise Leaflet haritası üzerinde sunucudan gelen konum ve zaman bilgilerini
+işaretçi (marker) ve popup olarak gösterir. Böylece test verilerinin üretiminden
+buluta iletilmesi ve tarayıcıda gerçek zamanlı görünmesi tek bir akışta sağlanır.
